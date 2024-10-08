@@ -23,6 +23,27 @@
             padding: 0.75em;
             text-align: center;
         }
+
+        /* New styles for the sections to align them in a row */
+        .row {
+            display: flex;
+            justify-content: space-between; /* Space between sections */
+            margin-top: 20px;
+        }
+
+        .section {
+            width: 30%; /* Each section takes up 30% of the row */
+            padding: 1em;
+            box-shadow: 0 0 5px #000; /* Adds a shadow for separation */
+            background-color: #E0F7FF; /* Same background color */
+            box-sizing: border-box; /* Ensure padding doesn't affect total width */
+        }
+
+        .divider {
+            width: 5px; /* Width of the divider */
+            background-color: black; /* Color of the divider */
+            margin: 0 10px; /* Space around the divider */
+        }
     </style>
 </head>
 <body>
@@ -53,25 +74,24 @@
         <!-- Clear floats before next sections -->
         <div style="clear: both;"></div>
 
-        <!-- The remaining sections -->
-        <div id="picture">
-            <h2 class="heading">Get Their Attention</h2>
-            <p>At the top of your page, state what your company can do for the customer. Why are you the best? Why should the customer use your services? What makes you so special? Why should the customer buy your goods or use your services? Make these reasons clear from the start and at the top.
- </p>
-            <img src="optimized-image1.jpg" alt="Optimized Image 1" width="300" height="300">
-            <img src="optimized-image2.jpg" alt="Optimized Image 2" width="300" height="300">
-        </div>
-
-        <div id="contact">
-            <h2 class="heading">Let's Make Contact</h2>
-            <p>Don't make the customer have to search for contact information. That's a great way to kill a sale, not create one. Make sure your contact information is easy to find. Have your address, phone number, fax number, e-mail address and link at the top and the bottom of every page.</p>
-        </div>
-
-        <!-- Moved "Get the Picture" section here -->
-        <div id="get-picture">
-            <h2 class="heading">Get the Picture</h2>
-            <p>Photos should be the right size (not more than 3 inches by 3 inches) and not be distorted. Your photos should not look like a fun house mirror. Background graphics should contrast with, not compete with text.  If you have a lot of photos, create thumbnail images (about 1 - 1 1/2 inches square) that link to larger-size images. Having the large images on separate pages means your home page will download faster. Also, pages with several large photos and little text look quite "old school" and amateurish – it looks as if you've got nothing to say, and that's the last thing you want to convey to your readers.
-</p>
+        <!-- Row for the three sections -->
+        <div class="row">
+            <div class="section" id="picture">
+                <h2 class="heading">Get Their Attention</h2>
+                <p>At the top of your page, state what your company can do for the customer. Why are you the best? Why should the customer use your services? What makes you so special? Why should the customer buy your goods or use your services? Make these reasons clear from the start and at the top.</p>
+                <img src="optimized-image1.jpg" alt="Optimized Image 1" width="100%" height="auto">
+                <img src="optimized-image2.jpg" alt="Optimized Image 2" width="100%" height="auto">
+            </div>
+            <div class="divider"></div> <!-- Divider between sections -->
+            <div class="section" id="contact">
+                <h2 class="heading">Let's Make Contact</h2>
+                <p>Don't make the customer have to search for contact information. That's a great way to kill a sale, not create one. Make sure your contact information is easy to find. Have your address, phone number, fax number, e-mail address and link at the top and the bottom of every page.</p>
+            </div>
+            <div class="divider"></div> <!-- Divider between sections -->
+            <div class="section" id="get-picture">
+                <h2 class="heading">Get the Picture</h2>
+                <p>Photos should be the right size (not more than 3 inches by 3 inches) and not be distorted. Your photos should not look like a fun house mirror. Background graphics should contrast with, not compete with text. If you have a lot of photos, create thumbnail images (about 1 - 1 1/2 inches square) that link to larger-size images. Having the large images on separate pages means your home page will download faster. Also, pages with several large photos and little text look quite "old school" and amateurish – it looks as if you've got nothing to say, and that's the last thing you want to convey to your readers.</p>
+            </div>
         </div>
 
         <div id="compete">
